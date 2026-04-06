@@ -7,10 +7,10 @@ type InputProps = {
     setB: (value: number) => void;
     setC: (value: number) => void;
     setD: (value: number) => void;
-}
+};
 
 export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) => {
-    console.log(a, b, c, d, setA, setB, setC, setD);
+
     return (
         <div>
             <label> a-value:</label>
@@ -46,5 +46,5 @@ export const CubicInput = ({ a, b, c, d, setA, setB, setC, setD }: InputProps) =
             />
 
         </div>
-    )
-}
+    );
+};

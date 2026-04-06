@@ -17,5 +17,5 @@ export const CubicEquation = ({ a, b, c, d }: CubicEquationProps) => {
         <div>
             <h3> {equation} </h3>
         </div>
-    )
-}
+    );
+};
