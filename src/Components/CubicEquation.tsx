@@ -14,8 +14,10 @@ export const CubicEquation = ({ a, b, c, d }: CubicEquationProps) => {
     equation += (d === 0 ? "" : (d > 0 ? " + " + d : " - " + Math.abs(d))) + " = 0";
 
     return (
-        <div>
-            <h3> {equation} </h3>
+        <div className="flex items-center justify-center min-h-[150px]">
+            <h3 className="text-2xl font-semibold text-gray-800 bg-gray-100 px-6 py-3 rounded-2xl shadow-md">
+                {equation}
+            </h3>
         </div>
     );
 };
