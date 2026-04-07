@@ -44,7 +44,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 px-6 py-4 space-y-4">
       <CubicInput
         a={a}
         b={b}
@@ -56,45 +56,37 @@ export const App = () => {
         setD={setD}
         onSave={() => setHistory([...history, { a, b, c, d }])}
       />
-      {a !== 0 && (
-        <CubicEquation
-          a={a}
-          b={b}
-          c={c}
-          d={d}
-        />
-      )}
-      <div className="flex justify-center items-start gap-[40px] mt-[30px]">
-        <div className="flex flex-col gap-[20px]">
-          {a === 0 ? (
-            <div>
-              <p className="text-[20px] text-center my-[30px] font-medium text-red-500">
-                The coefficient "a" cannot be equal to 0
-              </p>
-            </div>
-          ) : (
+      <CubicEquation
+        a={a}
+        b={b}
+        c={c}
+        d={d}
+      />
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
+          <div className="flex flex-col gap-4">
             <CubicTable
               p={p}
               q={q}
               discriminant={discriminant}
               roots={roots}
             />
-          )}
-          <CubicHistory
-            history={history}
-            setA={setA}
-            setB={setB}
-            setC={setC}
-            setD={setD}
+            <CubicHistory
+              history={history}
+              setA={setA}
+              setB={setB}
+              setC={setC}
+              setD={setD}
+            />
+          </div>
+          <CubicGraph
+            a={a}
+            b={b}
+            c={c}
+            d={d}
+            roots={roots}
           />
         </div>
-        <CubicGraph
-          a={a}
-          b={b}
-          c={c}
-          d={d}
-          roots={roots}
-        />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export const CubicTable = ({ p, q, discriminant, roots }: CubicTableProps) => {
             <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                 <div className="bg-gray-100 px-4 py-3 border-b">
                     <h2 className="text-lg font-semibold text-gray-700">
-                        Cubic Details
+                        Cubic Table
                     </h2>
                 </div>
                 <table className="w-full text-left border-collapse">
