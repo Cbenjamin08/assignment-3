@@ -10,15 +10,11 @@ export const CubicHistory = ({ history, setA, setB, setC, setD }: CubicHistoryPr
     return (
         <div className="flex justify-center py-6">
             <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                
-                {/* Title */}
                 <div className="bg-gray-100 px-4 py-3 border-b">
                     <h2 className="text-lg font-semibold text-gray-700">
                         History
                     </h2>
                 </div>
-
-                {/* Table */}
                 <table className="w-full text-center border-collapse">
                     <thead className="bg-gray-50 text-gray-600 text-sm uppercase">
                         <tr>
@@ -28,7 +24,6 @@ export const CubicHistory = ({ history, setA, setB, setC, setD }: CubicHistoryPr
                             <th className="py-2">d</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         {history.map((coeff, i) => (
                             <tr
@@ -49,8 +44,6 @@ export const CubicHistory = ({ history, setA, setB, setC, setD }: CubicHistoryPr
                         ))}
                     </tbody>
                 </table>
-
-                {/* Empty state */}
                 {history.length === 0 && (
                     <div className="text-center text-gray-400 py-4 text-sm">
                         No history yet
