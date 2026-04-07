@@ -69,7 +69,7 @@ export const App = () => {
           {a === 0 ? (
             <div>
               <p className="text-[20px] text-center my-[30px] font-medium text-red-500">
-                Coefficient 'a' cannot be zero.
+                The coefficient "a" cannot be equal to 0
               </p>
             </div>
           ) : (
@@ -88,15 +88,13 @@ export const App = () => {
             setD={setD}
           />
         </div>
-        {a !== 0 && (
-          <CubicGraph
-            a={a}
-            b={b}
-            c={c}
-            d={d}
-            roots={roots}
-          />
-        )}
+        <CubicGraph
+          a={a}
+          b={b}
+          c={c}
+          d={d}
+          roots={roots}
+        />
       </div>
     </div>
   );
