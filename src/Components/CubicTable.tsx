@@ -18,40 +18,32 @@ export const CubicTable = ({ p, q, discriminant, roots }: CubicTableProps) => {
                     <tbody>
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">p</td>
-                            <td className="px-4 py-2 text-gray-800">{p}</td>
+                            <td className="px-4 py-2 text-gray-800">{p.toFixed(3)}</td>
                         </tr>
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">q</td>
-                            <td className="px-4 py-2 text-gray-800">{q}</td>
+                            <td className="px-4 py-2 text-gray-800">{q.toFixed(3)}</td>
                         </tr>
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">Discriminant</td>
-                            <td className="px-4 py-2 text-gray-800">{discriminant}</td>
+                            <td className="px-4 py-2 text-gray-800">{discriminant.toFixed(3)}</td>
                         </tr>
 
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">Root 1</td>
-                            <td className="px-4 py-2 text-gray-800">{roots[0]}</td>
+                            <td className="px-4 py-2 text-gray-800">{roots[0].toFixed(3)}</td>
                         </tr>
 
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">Root 2</td>
                             <td className="px-4 py-2 text-gray-800">
-                                {roots.length === 3
-                                    ? roots[1]
-                                    : discriminant > 0
-                                        ? "complex"
-                                        : roots[0]}
+                                {roots.length === 3 ? roots[1].toFixed(3): discriminant > 0? "complex" : roots[0].toFixed(3)}
                             </td>
                         </tr>
                         <tr className="border-t">
                             <td className="px-4 py-2 font-medium text-gray-600">Root 3</td>
                             <td className="px-4 py-2 text-gray-800">
-                                {roots.length === 3
-                                    ? roots[2]
-                                    : discriminant > 0
-                                        ? "complex"
-                                        : roots[0]}
+                                {roots.length === 3 ? roots[2].toFixed(3) : discriminant > 0 ? "complex" : roots[0].toFixed(3)}
                             </td>
                         </tr>
                     </tbody>
